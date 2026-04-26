@@ -63,18 +63,4 @@ The biggest challenge was connecting everything together — especially refreshi
 
 I am most proud of the **History screen with RecyclerView + Adapter** and the **SQLite integration**. Being able to display dynamic data from the database, support delete functionality, and handle unit conversion shows strong understanding of Android architecture, adapters, and database management — skills I can confidently discuss in job interviews.
 
----
-
-**Thank you for reviewing my CS 360 Portfolio Artifact!**
-
----
-
-### What to Do Now:
-1. Go to your GitHub repo → Edit `README.md`
-2. Paste the entire text above
-3. Update the ZIP download link if needed
-4. Submit the repository link in your course
-
-Would you like me to make any part longer, shorter, or more personal? Just say the word and I’ll adjust it immediately. 
-
-You’re done with CS 360! 🎉
+----
