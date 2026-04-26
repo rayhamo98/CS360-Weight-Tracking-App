@@ -1,66 +1,19 @@
-# CS 360 - Mobile Architecture & Programming  
-**Final Portfolio Artifact**
+# Project – Weight Tracking App
 
-**Student Name:** Rimon Hamo  
-**Date:** April 23, 2026
+This project is a mobile application developed for CS 360 that allows users to track their weight over time. The app includes user authentication, daily weight logging with unit conversion (kg/lbs), history tracking, goal setting, and SMS notifications when goals are reached.
 
----
+## Reflection
 
-## Portfolio Artifact
+I developed the Weight Tracking App to support users in monitoring their weight loss or fitness journey. The main objectives were to enable users to create accounts, securely log in, record daily weight entries with date and unit selection, view their complete history, set personal goal weights, and receive SMS alerts upon reaching their goals. The app was designed with simplicity and motivation in mind to help users stay consistent with their progress.
 
-**Project Three – Weight Tracking App**  
-[Download Completed App ZIP](https://github.com/rayhamo98/CS360-Weight-Tracking-App/raw/main/Weight_Tracking_App_RimonHamo.zip)
+The application consists of five primary screens: Login/Register, Dashboard, History (powered by RecyclerView), Add Weight dialog, and SMS Permission settings. I focused on creating a clean, user-centered interface with large buttons, clear labels, and consistent styling. The RecyclerView in the History screen allows users to easily scroll through past entries, while key actions like adding weight remain prominently visible. This design approach ensures quick data entry and clear visibility of progress with minimal effort from the user.
 
-This ZIP contains the full Android Studio project with all features implemented.
+I began development by first creating the layouts and button structures, then progressively added functionality. I followed a step-by-step approach, starting with the user interface and navigation, followed by the login and registration system, Dashboard, History screen with RecyclerView, and finally the goal-setting and SMS notification features. I maintained clean code organization by separating concerns into distinct classes for the database, activities, and adapter. This methodical process helped me identify and resolve issues early while allowing me to see the application take shape incrementally.
 
----
+To ensure functionality, I conducted extensive testing using the Android Emulator. I verified all user flows including registration, login, adding and deleting weight entries, unit switching, and SMS notifications. Edge cases such as empty fields and denied permissions were also tested. This process revealed issues with RecyclerView data refreshing and unit conversion logic, which were resolved prior to submission. Thorough testing was essential to confirm the app’s stability and reliability for end users.
 
-## Reflection Questions
+One of the main challenges during development was ensuring the RecyclerView updated correctly after adding or deleting entries and implementing accurate kg/lbs conversion. I addressed these by creating a custom `WeightEntry` class and enhancing the adapter’s `updateData()` method. Additionally, I introduced a dedicated settings screen with a toggle switch to give users easy control over SMS notifications.
 
-### Briefly summarize the requirements and goals of the app you developed. What user needs was this app designed to address?
+I am particularly proud of the **History screen with RecyclerView and Adapter**, along with the **SQLite database integration**. Successfully displaying dynamic data from the database, supporting delete functionality, and managing unit conversion demonstrates a solid understanding of Android architecture, adapters, and local data management — skills I can confidently apply in future development work and professional settings.
 
-The Weight Tracking App was designed to help users monitor their weight loss or fitness journey. The main goals were to allow users to create an account, securely log in, record daily weight entries (with date and unit selection - kg or lbs), view their complete history, set a personal goal weight, and receive an SMS notification when they reach their goal. 
-
-It addresses key user needs such as simplicity, data persistence, progress tracking, and motivation through goal achievement alerts.
-
-### What screens and features were necessary to support user needs and produce a user-centered UI for the app? How did your UI designs keep users in mind? Why were your designs successful?
-
-I created five main screens:
-- Login / Register
-- Dashboard (welcome + quick navigation)
-- History (RecyclerView list of all entries)
-- Add Weight (dialog)
-- SMS Permission settings
-
-The UI was kept clean and simple with large buttons, clear labels, and consistent colors. I used RecyclerView for easy scrolling through history and made sure important actions (Add Weight, View History) were always visible. The design is user-centered because it focuses on quick data entry and clear progress visibility — users can log weight in just a few taps.
-
-### How did you approach the process of coding your app? What techniques or strategies did you use? How could those techniques or strategies be applied in the future?
-
-I followed a modular and iterative approach:
-1. Set up SQLite database and user authentication first
-2. Built the login/register system
-3. Created the Dashboard and navigation
-4. Implemented the History screen with RecyclerView + Adapter
-5. Added goal setting and SMS functionality last
-
-I used separation of concerns (separate classes for DatabaseHelper, Activities, Adapter) and tested each feature individually before connecting them. This strategy helped me catch bugs early and made the code much easier to maintain. I will definitely use this step-by-step modular approach in all future app development projects.
-
-### How did you test to ensure your code was functional? Why is this process important, and what did it reveal?
-
-I performed extensive testing using the Android Emulator:
-- Manual testing of all user flows (register, login, add weight, delete, unit switching)
-- Edge cases (empty fields, invalid input, permission denied)
-- Persistence testing (close and reopen app to verify data remains)
-- SMS functionality testing
-
-Testing was crucial because it revealed bugs in RecyclerView refreshing, unit conversion logic, and permission handling that I was able to fix before submission. It gave me confidence that the app is stable and user-friendly.
-
-### Consider the full app design and development process from initial planning to finalization. Where did you have to innovate to overcome a challenge?
-
-The biggest challenge was connecting everything together — especially refreshing the RecyclerView after adding or deleting entries and handling kg/lbs conversion properly. I had to innovate by creating a custom `WeightEntry` inner class and improving the adapter’s `updateData()` method. Another challenge was SMS permission handling — I created a dedicated settings screen with a toggle so users can enable/disable notifications.
-
-### In what specific component of your mobile app were you particularly successful in demonstrating your knowledge, skills, and experience?
-
-I am most proud of the **History screen with RecyclerView + Adapter** and the **SQLite integration**. Being able to display dynamic data from the database, support delete functionality, and handle unit conversion shows strong understanding of Android architecture, adapters, and database management — skills I can confidently discuss in job interviews.
-
-----
+All code and content in this project were created by me. I only used basic spell-checking and grammar tools while preparing this README.
